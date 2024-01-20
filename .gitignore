@@ -1,0 +1,17 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Executables
+*.bin
+*.elf
+
+# PROS
+TitanVexOverUnderCode/bin/
+TitanVexOverUnderCode/.vscode/
+TitanVexOverUnderCode/.cache/
+TitanVexOverUnderCode/compile_commands.json
+TitanVexOverUnderCode/temp.log
+TitanVexOverUnderCode/temp.errors
+TitanVexOverUnderCode/*.ini
+TitanVexOverUnderCode/.d/
