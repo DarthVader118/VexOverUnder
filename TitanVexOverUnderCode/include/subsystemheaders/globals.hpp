@@ -1,4 +1,4 @@
 #include "main.h"
 
 // Motors
-extern pros::Motor lift();
+extern pros::Motor lift;
