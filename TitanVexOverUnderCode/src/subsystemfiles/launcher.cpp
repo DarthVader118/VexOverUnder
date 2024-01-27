@@ -6,7 +6,7 @@
 bool isLauncherActive = false;
 
 void toggleLauncher() {
-    if (controller.get_digital(DIGITAL_A)) {
+    if (controller.get_digital(DIGITAL_L1)) {
         isLauncherActive = !isLauncherActive; // Toggle the state of the launcher
     }
 
@@ -18,12 +18,5 @@ void toggleLauncher() {
     } else {
         // Stop the launcher
         launcherMotor = 0;
-    }
-}
-
-void opcontrol() {
-    while (true) {
-        toggleLauncher();
-        pros::delay(20);
     }
 }

@@ -80,7 +80,7 @@ void opcontrol() {
 		
 		drive();
 		setIntakeMotors();
-
+		toggleLauncher();
 		pros::delay(20);
 	}
 }
