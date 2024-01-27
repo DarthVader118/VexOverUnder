@@ -30,7 +30,7 @@ void setIntakeMotors(){
                 pressDuration++;
             }
             else{
-                if (pressDuration < 5){
+                if (pressDuration < 15){
                     disableMotors();
                 }
             }
