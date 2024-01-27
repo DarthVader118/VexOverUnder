@@ -8,16 +8,17 @@
 
 bool areFlapsExpanded = false;
 
-int leftFlap;
-int rightFlap;
+//int leftFlap;
+//int rightFlap;
 
 void setFlapMotors(int leftFlap, int rightFlap){
-    flapLeftMotor = leftFlap;
-    flapRightMotor = rightFlap;
+    /*flapLeftMotor = leftFlap;
+    flapRightMotor = rightFlap; */
 
 }
 
 void toggleFlaps() {
+    /*
     if (controller.get_digital(DIGITAL_A)) {
         if (areFlapsExpanded) {
             // Retract the flaps
@@ -30,12 +31,13 @@ void toggleFlaps() {
             rightFlap = 127; // Replace 127 with the speed you want
             areFlapsExpanded = true;
         }
-    }
+    } */
 }
 
 void opcontrol() {
-    while (true) {
+
+    /*while (true) {
         toggleFlaps();
         pros::delay(20);
-    }
+    }*/
 }
