@@ -79,6 +79,7 @@ void opcontrol() {
 	while (true) {
 		
 		drive();
+		setIntakeMotors();
 
 		pros::delay(20);
 	}
