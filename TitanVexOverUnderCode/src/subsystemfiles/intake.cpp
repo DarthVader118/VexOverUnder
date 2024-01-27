@@ -44,7 +44,7 @@ void setIntakeMotors(){
             else
             {
                 pressDuration++;
-                setIntake(127);
+                setIntake(-127);
             }
 
         }
