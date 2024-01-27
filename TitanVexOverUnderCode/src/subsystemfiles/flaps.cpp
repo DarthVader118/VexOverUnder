@@ -8,6 +8,9 @@
 
 bool areFlapsExpanded = false;
 
+int leftFlap;
+int rightFlap;
+
 void setFlapMotors(int leftFlap, int rightFlap){
     flapLeftMotor = leftFlap;
     flapRightMotor = rightFlap;
