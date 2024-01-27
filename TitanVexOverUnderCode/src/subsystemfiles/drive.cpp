@@ -28,11 +28,22 @@ void resetDriveEncoders(){
     driveRightFront.tare_position();
 }
 
+//auton drive methods
 void translate(int units, int voltage){
     //reset motor encoders to 0
     resetDriveEncoders();
+
     //drive forward for units distance
+    while(driveLeftFront.get_position() < units){
+        setDriveMotors(voltage, voltage);
+        pros::delay(10);
+    }
+
     //brake
+    setDriveMotors(-10, -10);
+    pros::delay(80);
+    
     //drive back to neutral
+    setDriveMotors(0, 0);
 
 }
