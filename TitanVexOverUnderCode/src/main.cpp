@@ -75,34 +75,10 @@ void autonomous() {}
  * task, not resume it from where it left off.
  */
 void opcontrol() {
-	pros::Controller master(pros::E_CONTROLLER_MASTER);
-	pros::Motor left_mtr(1);
-	pros::Motor right_mtr(2);
 
 	while (true) {
-		pros::lcd::print(0, "%d %d %d", (pros::lcd::read_buttons() & LCD_BTN_LEFT) >> 2,
-		(pros::lcd::read_buttons() & LCD_BTN_CENTER) >> 1,
-		(pros::lcd::read_buttons() & LCD_BTN_RIGHT) >> 0);
-
-		int left = master.get_analog(ANALOG_LEFT_Y);
-		int right = master.get_analog(ANALOG_RIGHT_Y);
-
-		pros::lcd::set_text(1, std::to_string(left));
-
-		if (left > 10)
-		{
-			left_mtr.move_velocity(-100);
-		}
-		else if (left < -10)
-		{
-			left_mtr.move_velocity(100);
-		}
-		else
-		{
-			left_mtr.move_velocity(0);
-		}
 		
-		// right_mtr = right;
+		drive();
 
 		pros::delay(20);
 	}
