@@ -20,3 +20,19 @@ void drive(){
     }
     setDriveMotors(left, -right);
 }
+
+void resetDriveEncoders(){
+    driveLeftBack.tare_position();
+    driveRightBack.tare_position();
+    driveLeftFront.tare_position();
+    driveRightFront.tare_position();
+}
+
+void translate(int units, int voltage){
+    //reset motor encoders to 0
+    resetDriveEncoders();
+    //drive forward for units distance
+    //brake
+    //drive back to neutral
+
+}
