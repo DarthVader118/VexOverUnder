@@ -18,5 +18,9 @@ void drive(){
     if(abs(right) < 10){
         right = 0;
     }
+<<<<<<< Updated upstream
     setDriveMotors(left, -right);
+=======
+    setDriveMotors(left, right);
+>>>>>>> Stashed changes
 }
