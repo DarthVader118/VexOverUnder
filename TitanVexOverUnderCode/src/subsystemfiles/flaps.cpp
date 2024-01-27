@@ -18,6 +18,7 @@ void setFlapMotors(int leftFlap, int rightFlap){
 }
 
 void toggleFlaps() {
+    
     /*
     if (controller.get_digital(DIGITAL_A)) {
         if (areFlapsExpanded) {
