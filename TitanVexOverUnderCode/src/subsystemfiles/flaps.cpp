@@ -11,6 +11,7 @@ bool areFlapsExpanded = false;
 void setFlapMotors(int leftFlap, int rightFlap){
     flapLeftMotor = leftFlap;
     flapRightMotor = rightFlap;
+
 }
 
 void toggleFlaps() {
