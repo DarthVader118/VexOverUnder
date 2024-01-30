@@ -83,6 +83,6 @@ void move(pros::Motor_Group motorGroup, int units, int voltage){
     setDriveMotors(0, 0);
 }
 
-void rotate(int leftUnits, int rightUnits, int leftVoltage, int rightVoltage){
+/*void rotate(int leftUnits, int rightUnits, int leftVoltage, int rightVoltage){
     translate(leftDrive, leftUnits, leftVoltage);
-}
+}*/
