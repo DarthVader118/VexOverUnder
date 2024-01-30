@@ -10,4 +10,7 @@ double avgDriveEncoderVal();
 //auton functions
 
 //translate - drive forwards and backwards
-void translate(int units, int voltage);
+void move(int units, int voltage);
+void move(pros::Motor_Group motorGroup, int units, int voltage);
+
+void rotate(int degrees, int voltage);

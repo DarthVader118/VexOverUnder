@@ -1,5 +1,31 @@
 #include "main.h"
 #include <string>
+#include "subsystemfiles\globals.cpp"
+
+/* pros::Motor intake(1);
+pros::Motor driveLeftBack(2);
+pros::Motor driveLeftFront(3);
+pros::Motor driveRightBack(4);
+pros::Motor driveRightFront(5);  
+
+pros::Motor driveLeftBack = pros::Motor(2, true);
+
+pros::Motor_Group rightDrive(pros:: Motor driveRightFront, pros::Motor driveRightBack);
+
+pros::Motor flapLeftMotor(6); // Replace 6 with the actual port number
+pros::Motor flapRightMotor(7); // Replace 7 with the actual port number
+
+pros::Controller controller(pros::E_CONTROLLER_MASTER); /**/
+
+pros::Motor driveLeftBack = pros::Motor(2, true);
+pros::Motor driveLeftFront = pros::Motor(3, true);
+pros::Motor driveRightBack = pros::Motor(4, true);
+pros::Motor driveRightFront = pros::Motor(5, true); 
+
+pros::Motor_Group leftDrive = pros::Motor_Group({driveLeftBack, driveLeftFront});
+pros::Motor_Group rightDrive = pros::Motor_Group({driveRightBack, driveRightFront});
+
+pros::Controller controller = pros::E_CONTROLLER_MASTER;
 
 /**
  * A callback function for LLEMU's center button.
@@ -67,7 +93,9 @@ void competition_initialize() {}
  * will be stopped. Re-enabling the robot will restart the task, not re-start it
  * from where it left off.
  */
-void autonomous() {}
+void autonomous() {
+
+}
 
 /**
  * Runs the operator control code. This function will be started in its own task
@@ -80,8 +108,11 @@ void autonomous() {}
  *
  * If the robot is disabled or communications is lost, the
  * operator control task will be stopped. Re-enabling the robot will restart the
- * task, not resume it from where it left off.
+ * task, not resume it from where it left off
+
  */
+
+
 void opcontrol() {
 
 	while (true) {

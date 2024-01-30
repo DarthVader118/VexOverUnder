@@ -1,4 +1,8 @@
+
+#include "../main.cpp"
 #include "main.h"
+#include <string>
+#include "globals.cpp"
 
 void setDriveMotors(int left, int right){
     driveLeftBack = left;
@@ -37,7 +41,7 @@ double avgDriveEncoderVal() {
 }
 
 //auton drive methods
-void translate(int units, int voltage){
+void move(int units, int voltage){
 
     //set direction based on units sign (+ or -)
     int dir = abs(units)/units; //either 1 or -1 (1 = forward, -1 = backward)
@@ -56,5 +60,29 @@ void translate(int units, int voltage){
     
     //set back to neutral
     setDriveMotors(0, 0);
+}
 
+void move(pros::Motor_Group motorGroup, int units, int voltage){
+
+    //set direction based on units sign (+ or -)
+    int dir = abs(units)/units; //either 1 or -1 (1 = forward, -1 = backward)
+
+    resetDriveEncoders();
+
+    //drive forward for a distance of units
+    while(avgDriveEncoderVal() < abs(units)){
+        setDriveMotors(voltage * dir, voltage * dir);
+        pros::delay(10);
+    }
+
+    //brake/stop
+    setDriveMotors(-10 * dir, -10 * dir);
+    pros::delay(80);
+    
+    //set back to neutral
+    setDriveMotors(0, 0);
+}
+
+void rotate(int leftUnits, int rightUnits, int leftVoltage, int rightVoltage){
+    translate(leftDrive, leftUnits, leftVoltage);
 }

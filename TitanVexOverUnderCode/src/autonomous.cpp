@@ -2,6 +2,7 @@
 
 void redLeftCorner(){
     //translate(something, something)
+    translate
     //^^ input measured values based on map
 }
 

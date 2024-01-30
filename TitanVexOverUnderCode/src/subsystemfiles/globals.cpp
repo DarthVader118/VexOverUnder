@@ -6,6 +6,9 @@ pros::Motor driveLeftFront(3);
 pros::Motor driveRightBack(4);
 pros::Motor driveRightFront(5);
 
+pros::Motor_Group leftDrive(pros:: Motor driveLeftFront, pros::Motor driveLeftBack);
+pros::Motor_Group rightDrive(pros:: Motor driveRightFront, pros::Motor driveRightBack);
+
 pros::Motor flapLeftMotor(6); // Replace 6 with the actual port number
 pros::Motor flapRightMotor(7); // Replace 7 with the actual port number
 
