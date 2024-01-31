@@ -1,8 +1,8 @@
 #include "main.h"
 
 
-#define FLAP_LEFT_PORT 7  // Replace 1 with the actual port number
-#define FLAP_RIGHT_PORT 8 // Replace 2 with the actual port number
+#define FLAP_LEFT_PORT 'h'  // Replace 1 with the actual port number
+#define FLAP_RIGHT_PORT 'g' // Replace 2 with the actual port number
 
 
 pros::Motor intake(1);
