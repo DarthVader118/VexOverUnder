@@ -1,6 +1,5 @@
 #include "main.h"
 #include <string>
-#include "subsystemfiles\globals.cpp"
 
 /* pros::Motor intake(1);
 pros::Motor driveLeftBack(2);
@@ -95,6 +94,11 @@ void competition_initialize() {}
  */
 void autonomous() {
 	move(100, 100);
+	rotateLeft(90, 100);
+	move(100, 100);
+	rotateRight(90, 100);
+	setFlapsExpanded(true);
+
 }
 
 /**

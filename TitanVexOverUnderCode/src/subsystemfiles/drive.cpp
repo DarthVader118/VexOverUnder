@@ -3,12 +3,18 @@
 #include "main.h"
 #include <string>
 #include "globals.cpp"
+#include <chrono>
+
+auto globalTime = std::chrono::high_resolution_clock::now();
+
+bool turning = false;
+float calculatedTurningTime = 0.0;
 
 void setDriveMotors(int left, int right){
     driveLeftBack = left;
     driveLeftFront = left;
-    driveRightBack = right;
-    driveRightFront = right;
+    driveRightBack = -right;
+    driveRightFront = -right;
 }
 
 void drive(){
@@ -22,7 +28,7 @@ void drive(){
     if(abs(right) < 10){
         right = 0;
     }
-    setDriveMotors(left, -right);
+    setDriveMotors(left, right);
 }
 
 //reset motors to 0 pos
@@ -49,7 +55,9 @@ void move(int units, int voltage){
     resetDriveEncoders();
 
     //drive forward for a distance of units
-    while(avgDriveEncoderVal() < abs(units)){
+    while(avgDriveEncoderVal() 
+    
+    < abs(units)){
         setDriveMotors(voltage * dir, voltage * dir);
         pros::delay(10);
     }
@@ -83,6 +91,25 @@ void move(pros::Motor_Group motorGroup, int units, int voltage){
     setDriveMotors(0, 0);
 }
 
-/*void rotate(int leftUnits, int rightUnits, int leftVoltage, int rightVoltage){
-    translate(leftDrive, leftUnits, leftVoltage);
-}*/
+void rotateLeft(int degrees, int voltage){
+    /*resetDriveEncoders();
+    auto start = std::chrono::high_resolution_clock::now();
+    if (turning)
+    {
+        
+    }*/
+    resetDriveEncoders();
+    while(avgDriveEncoderVal() < degrees){
+        setDriveMotors(-voltage, voltage);
+        pros::delay(10);
+    }
+}
+
+void rotateRight(int degrees, int voltage){
+    resetDriveEncoders();
+    int l = 1;
+    while(avgDriveEncoderVal() < degrees * l){
+        setDriveMotors(voltage, -voltage);
+        pros::delay(10);
+    }
+}
