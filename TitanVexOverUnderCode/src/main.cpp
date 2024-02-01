@@ -1,30 +1,7 @@
 #include "main.h"
 #include <string>
 
-/* pros::Motor intake(1);
-pros::Motor driveLeftBack(2);
-pros::Motor driveLeftFront(3);
-pros::Motor driveRightBack(4);
-pros::Motor driveRightFront(5);  
 
-pros::Motor driveLeftBack = pros::Motor(2, true);
-
-pros::Motor_Group rightDrive(pros:: Motor driveRightFront, pros::Motor driveRightBack);
-
-pros::Motor flapLeftMotor(6); // Replace 6 with the actual port number
-pros::Motor flapRightMotor(7); // Replace 7 with the actual port number
-
-pros::Controller controller(pros::E_CONTROLLER_MASTER); /**/
-
-pros::Motor driveLeftBack = pros::Motor(2, true);
-pros::Motor driveLeftFront = pros::Motor(3, true);
-pros::Motor driveRightBack = pros::Motor(4, true);
-pros::Motor driveRightFront = pros::Motor(5, true); 
-
-pros::Motor_Group leftDrive = pros::Motor_Group({driveLeftBack, driveLeftFront});
-pros::Motor_Group rightDrive = pros::Motor_Group({driveRightBack, driveRightFront});
-
-pros::Controller controller = pros::E_CONTROLLER_MASTER;
 
 /**
  * A callback function for LLEMU's center button.
@@ -52,15 +29,15 @@ void initialize() {
 	pros::lcd::initialize();
 	pros::lcd::set_text(1, "Hello PROS User! - Team 42065 ");
 
-	//set drive motors to brake
-	driveLeftBack.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	driveRightBack.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	driveLeftFront.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	driveRightFront.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	// //set drive motors to brake
+	// driveLeftBack.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	// driveRightBack.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	// driveLeftFront.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	// driveRightFront.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 
-	launcherMotor.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
+	// launcherMotor.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
 
-	pros::lcd::register_btn1_cb(on_center_button);
+	// pros::lcd::register_btn1_cb(on_center_button);
 }
 
 /**
@@ -93,11 +70,11 @@ void competition_initialize() {}
  * from where it left off.
  */
 void autonomous() {
-	move(100, 100);
-	rotateLeft(90, 100);
-	move(100, 100);
-	rotateRight(90, 100);
-	setFlapsExpanded(true);
+	// move(100, 100);
+	// rotateLeft(90, 100);
+	// move(100, 100);
+	// rotateRight(90, 100);
+	// setFlapsExpanded(true);
 
 }
 
@@ -124,6 +101,7 @@ void opcontrol() {
 		drive();
 		setIntakeMotors();
 		toggleLauncher();
+		setFlaps();
 		pros::delay(20);
 	}
 }
