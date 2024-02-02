@@ -74,6 +74,10 @@ void autonomous() {
 	test();
 }
 
+void autonSkills(){
+	spamLauncher();
+}
+
 /**
  * Runs the operator control code. This function will be started in its own task
  * with the default priority and stack size whenever the robot is enabled via
@@ -93,7 +97,8 @@ void autonomous() {
 void opcontrol() {
 	while (true) {
 
-		autonomous();
+		//autonomous();
+		autonSkills();
 		
 		drive();
 		setIntakeMotors();

@@ -8,6 +8,8 @@ void turnLeft(int units);
 
 void turnRight(int units);
 
-void runLauncher();
+void runLauncherOnce();
 
 void test();
+
+void spamLauncher();

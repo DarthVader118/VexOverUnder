@@ -54,11 +54,17 @@ void turnRight(int units){
     leftDrive.move_relative(units, MOTOR_MAX_SPEED);
 }
 
-void runLauncher(){
+void runLauncherOnce(){
     launcherMotor = -127; // Replace 127 with the speed you want
     pros::delay(1100); // Wait for a fixed time (1 second in this case)
     launcherMotor = 0; // Stop the launcher
 }
+
+void spamLauncher(){// Replace 127 with the speed you want
+    launcherMotor.move_velocity(-127);
+    pros::delay(31000);
+    launcherMotor.move_velocity(0);
+}  
 
 void test(){
     driveAuton(100);
