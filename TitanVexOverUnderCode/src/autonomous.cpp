@@ -59,3 +59,10 @@ void runLauncher(){
     pros::delay(1100); // Wait for a fixed time (1 second in this case)
     launcherMotor = 0; // Stop the launcher
 }
+
+void test(){
+    driveAuton(100);
+    turnLeft(20);
+    driveAuton(50);
+    turnRight(20);
+}
