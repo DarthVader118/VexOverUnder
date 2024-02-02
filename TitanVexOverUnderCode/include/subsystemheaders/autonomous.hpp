@@ -1,3 +1,7 @@
 #include "main.h"
 
-void autonomous();
+
+void forwardAuton();
+
+// void turnLeft(int time);
+// void turnRight(int time);

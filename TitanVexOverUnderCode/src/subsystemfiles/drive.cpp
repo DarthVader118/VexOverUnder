@@ -9,8 +9,8 @@
 void setDriveMotors(int left, int right){
     driveLeftBack = left;
     driveLeftFront = left;
-    driveRightBack = right;
-    driveRightFront = right;
+    driveRightBack = -right;
+    driveRightFront = -right;
 }
 
 void drive(){
@@ -24,7 +24,7 @@ void drive(){
     if(abs(right) < 5){
         right = 0;
     }
-    setDriveMotors(left, -right);
+    setDriveMotors(left, right);
 }
 
 // //reset motors to 0 pos

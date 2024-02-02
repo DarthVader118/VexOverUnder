@@ -77,6 +77,7 @@ void opcontrol(void);
 #include "subsystemheaders/intake.hpp"
 #include "subsystemheaders/launcher.hpp"
 #include "subsystemheaders/globals.hpp"
+#include "subsystemheaders/autonomous.hpp"
 
 
 #endif
