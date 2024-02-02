@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string>
+#include "autonomous.cpp"
 
 
 
@@ -76,8 +77,6 @@ void autonomous() {
 	// rotateRight(90, 100);
 	// setFlapsExpanded(true);
 
-	forwardAuton();
-
 }
 
 /**
@@ -97,8 +96,11 @@ void autonomous() {
 
 
 void opcontrol() {
-	autonomous();
+
 	while (true) {
+
+		//autonomous();
+		autonSkills();
 		
 		drive();
 		setIntakeMotors();
