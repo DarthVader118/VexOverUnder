@@ -2,8 +2,10 @@
 
 void autonomous();
 
-void driveAuton(int units);
+void driveForward(int units);
 
 void turnLeft(int units);
 
 void turnRight(int units);
+
+void driveAuton();

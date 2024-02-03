@@ -76,6 +76,11 @@ void autonomous() {
 	// rotateRight(90, 100);
 	// setFlapsExpanded(true);
 
+
+	// Skills
+	// toggleLauncherAuton();
+	// pros::delay(60000);
+	// toggleLauncherAuton();
 }
 
 /**

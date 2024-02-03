@@ -8,9 +8,22 @@ bool isLauncherActive = false;
 void toggleLauncher() {
     if (controller.get_digital(DIGITAL_UP)) {
         // Launch the ball
+        isLauncherActive = true;
         launcherMotor = -127; // Replace 127 with the speed you want
         pros::delay(1100); // Wait for a fixed time (1 second in this case)
         launcherMotor = 0; // Stop the launcher
+        isLauncherActive=false;
+    } else {
+        // Stop the launcher
+        isLauncherActive = false;
+        launcherMotor = 0;
+    }
+}
+
+void toggleLauncherAuton() {
+    if (!isLauncherActive) {
+        // Launch the ball
+        launcherMotor = -127; // Replace 127 with the speed you want
     } else {
         // Stop the launcher
         launcherMotor = 0;
