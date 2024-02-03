@@ -8,12 +8,22 @@
 // }
 
 int FULL_ROTATION_TIME = 1150;
-bool flapsOut = false;
+bool autonflapsOut = false;
 
 void forwardAuton(int time){
     // Assuming leftMotor and rightMotor are your motor variables
     // Set right motor to full power
     setDriveMotors(127, 127);
+
+    pros::delay(time * 1000); // Wait for the specified amount of time
+
+    setDriveMotors(0, 0); // Stop right motor
+}
+
+void backwardAuton(int time){
+    // Assuming leftMotor and rightMotor are your motor variables
+    // Set right motor to full power
+    setDriveMotors(-127, -127);
 
     pros::delay(time * 1000); // Wait for the specified amount of time
 
@@ -42,23 +52,23 @@ void turnRight(int degrees){
 
 void autonLauncher(int time) {
     launcherMotor = -127; 
-    pros::delay(time); 
+    pros::delay(time * 1000); 
     launcherMotor = 0; 
 }
 
 void autonFlap()
 {
-    if (flapsOut)
+    if (autonflapsOut)   
     {
         flapUp.set_value(true);
         flapDown.set_value(false);
-        flapsOut = false;
+        autonflapsOut = false;
     }
     else
     {
         flapUp.set_value(false);
         flapDown.set_value(true);
-        flapsOut = true;
+        autonflapsOut = true;
     }
 }
 

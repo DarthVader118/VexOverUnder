@@ -27,7 +27,7 @@ void on_center_button() {
  */
 void initialize() {
 	pros::lcd::initialize();
-	pros::lcd::set_text(1, "Hello PROS User! - Team 42065 ");
+	pros::lcd::set_text(1, "Test - Team 42065 ");
 
 	// //set drive motors to brake
 	// driveLeftBack.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
@@ -70,9 +70,27 @@ void competition_initialize() {}
  * from where it left off.
  */
 void autonomous() {
-	
+	// turnLeft(30);
+	// pros::delay(500);
+	// // forwardAuton(3);
+	// turnLeft(90);
+	// autonLauncher(30);	// turnRight(40);
+	// // pros::delay(500);
+	// // forwardAuton(8);
+	// // pros::delay(500);
+	// // autonFlap();
+	// // pros::delay(500);
+	// // forwardAuton(15);
+	// backwardAuton(5);
+	// turnLeft(20);
+	// autonFlap();
+	// backwardAuton(3);
+	// forwardAuton(3);
+	// turnRight(20);
 
 }
+
+
 
 /**
  * Runs the operator control code. This function will be started in its own task
@@ -99,5 +117,6 @@ void opcontrol() {
 		toggleLauncher();
 		setFlaps();
 		pros::delay(20);
+		
 	}
 }

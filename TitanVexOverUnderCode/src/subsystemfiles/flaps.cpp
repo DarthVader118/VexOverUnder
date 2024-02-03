@@ -6,29 +6,62 @@
 
 // Global variable to keep track of whether the flaps are expanded or not
 bool flapsOut = false;
+bool buttonPressed = false;
 
 void setFlaps()
 {
     if (controller.get_digital(DIGITAL_A))
     {
-        pros::delay(100);
-        if (flapsOut)
+        if (!buttonPressed)
         {
-            flapUp.set_value(true);
-            flapDown.set_value(false);
-            flapsOut = false;
+            pros::delay(10);
+            if (flapsOut)
+            {
+                flapUp.set_value(true);
+                flapDown.set_value(false);
+                flapsOut = false;
+            }
+            else
+            {
+                flapUp.set_value(false);
+                flapDown.set_value(true);
+                flapsOut = true;
+            }
         }
-        else
-        {
-            flapUp.set_value(false);
-            flapDown.set_value(true);
-            flapsOut = true;
-        }
+        buttonPressed = true;
+    }
+    else{
+        buttonPressed = false;
     }
 }
 
 
-
+// void setFlapsAuton(bool out)
+// {
+//     if (controller.get_digital(DIGITAL_A))
+//     {
+//         if (!buttonPressed)
+//         {
+//             pros::delay(10);
+//             if (flapsOut)
+//             {
+//                 flapUp.set_value(true);
+//                 flapDown.set_value(false);
+//                 flapsOut = false;
+//             }
+//             else
+//             {
+//                 flapUp.set_value(false);
+//                 flapDown.set_value(true);
+//                 flapsOut = true;
+//             }
+//         }
+//         buttonPressed = true;
+//     }
+//     else{
+//         buttonPressed = false;
+//     }
+// }
 
 
 
