@@ -1,6 +1,5 @@
 #include "main.h"
 #include <string>
-#include "autonomous.cpp"
 
 
 
@@ -71,11 +70,7 @@ void competition_initialize() {}
  * from where it left off.
  */
 void autonomous() {
-	// move(100, 100);
-	// rotateLeft(90, 100);
-	// move(100, 100);
-	// rotateRight(90, 100);
-	// setFlapsExpanded(true);
+	
 
 }
 
@@ -98,9 +93,6 @@ void autonomous() {
 void opcontrol() {
 
 	while (true) {
-
-		//autonomous();
-		autonSkills();
 		
 		drive();
 		setIntakeMotors();
