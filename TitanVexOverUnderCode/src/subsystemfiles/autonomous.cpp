@@ -8,6 +8,7 @@
 // }
 
 int FULL_ROTATION_TIME = 1150;
+bool flapsOut = false;
 
 void forwardAuton(int time){
     // Assuming leftMotor and rightMotor are your motor variables
@@ -39,6 +40,27 @@ void turnRight(int degrees){
     setDriveMotors(0, 0); // Stop motors
 }
 
+void autonLauncher(int time) {
+    launcherMotor = -127; 
+    pros::delay(time); 
+    launcherMotor = 0; 
+}
+
+void autonFlap()
+{
+    if (flapsOut)
+    {
+        flapUp.set_value(true);
+        flapDown.set_value(false);
+        flapsOut = false;
+    }
+    else
+    {
+        flapUp.set_value(false);
+        flapDown.set_value(true);
+        flapsOut = true;
+    }
+}
 
 
 // void forwardAuton() {

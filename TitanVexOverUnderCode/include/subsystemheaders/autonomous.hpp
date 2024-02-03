@@ -5,3 +5,7 @@ void forwardAuton(int time);
 void turnLeft(int degrees);
 
 void turnRight(int degrees);
+
+void autonLauncher(int time);
+
+void autonFlap();
