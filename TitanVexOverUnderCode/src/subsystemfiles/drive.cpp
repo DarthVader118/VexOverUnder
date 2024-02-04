@@ -6,14 +6,42 @@
 // bool turning = false;
 // float calculatedTurningTime = 0.0;
 
+bool reversed = false;
+bool previouslyReversed = false;
+
 void setDriveMotors(int left, int right){
-    driveLeftBack = left;
-    driveLeftFront = left;
-    driveRightBack = -right;
-    driveRightFront = -right;
+    if (reversed)
+    {
+        driveLeftBack = -left;
+        driveLeftFront = -left;
+        driveRightBack = right;
+        driveRightFront = right;
+    }
+    else
+    {
+        driveLeftBack = left;
+        driveLeftFront = left;
+        driveRightBack = -right;
+        driveRightFront = -right;
+    }
+}
+
+void toggleReverse()
+{
+    if (!previouslyReversed){
+        reversed = !reversed;
+    }
+    previouslyReversed = true;
 }
 
 void drive(){
+    if (controller.get_digital(DIGITAL_DOWN)){
+        toggleReverse();
+    }
+    else{
+        previouslyReversed = false;
+    }
+        
     int left = controller.get_analog(ANALOG_LEFT_Y);
     int right = controller.get_analog(ANALOG_RIGHT_Y);
 
