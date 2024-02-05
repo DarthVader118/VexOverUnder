@@ -88,6 +88,22 @@ void autonomous() {
 	// forwardAuton(3);
 	// turnRight(20);
 
+	//autonLauncher(60);
+	// launcherMotor = -127;
+	// launcherMotor.move(-127);
+	// pros::delay(60000);
+	// launcherMotor = 0;
+	// launcherMotor.move(0);
+
+	// pros::delay(500);
+
+	// backwardAuton(8);
+
+	// pros::delay(100);
+	// autonFlap();
+	// pros::delay(100);
+	
+	// backwardAuton(20);
 }
 
 
@@ -109,7 +125,9 @@ void autonomous() {
 
 
 void opcontrol() {
-
+	// launcherMotor = -127;
+	// pros::delay(60000);
+	// launcherMotor = 0;
 	while (true) {
 		
 		drive();
