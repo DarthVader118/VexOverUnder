@@ -1,7 +1,10 @@
 #include "main.h"
 
-void setDriveMotors(int left, int right);
+bool reversed;
+bool previouslyReversed;
 
+void setDriveMotors(int left, int right);
+void toggleReverse();
 void drive();
 
 // void resetDriveEncoders();
