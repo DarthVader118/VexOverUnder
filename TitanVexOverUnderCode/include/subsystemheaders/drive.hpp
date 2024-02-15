@@ -1,7 +1,5 @@
 #include "main.h"
 
-bool reversed;
-bool previouslyReversed;
 
 void setDriveMotors(int left, int right);
 void toggleReverse();
