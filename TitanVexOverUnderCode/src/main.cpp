@@ -70,40 +70,41 @@ void competition_initialize() {}
  * from where it left off.
  */
 void autonomous() {
-	// turnLeft(30);
-	// pros::delay(500);
-	// // forwardAuton(3);
-	// turnLeft(90);
-	// autonLauncher(30);	// turnRight(40);
-	// // pros::delay(500);
-	// // forwardAuton(8);
-	// // pros::delay(500);
-	// // autonFlap();
-	// // pros::delay(500);
-	// // forwardAuton(15);
-	// backwardAuton(5);
-	// turnLeft(20);
-	// autonFlap();
-	// backwardAuton(3);
-	// forwardAuton(3);
-	// turnRight(20);
+	turnLeft(30);
+	pros::delay(500);
+	forwardAuton(3);
+	turnLeft(90);
+	autonLauncher(30);	
+	turnRight(40);
+	pros::delay(500);
+	forwardAuton(8);
+	pros::delay(500);
+	autonFlap();
+	pros::delay(500);
+	forwardAuton(15);
+	backwardAuton(5);
+	turnLeft(20);
+	autonFlap();
+	backwardAuton(3);
+	forwardAuton(3);
+	turnRight(20);
 
-	//autonLauncher(60);
-	// launcherMotor = -127;
-	// launcherMotor.move(-127);
-	// pros::delay(60000);
-	// launcherMotor = 0;
-	// launcherMotor.move(0);
+	autonLauncher(60);
+	launcherMotor = -127;
+	launcherMotor.move(-127);
+	pros::delay(60000);
+	launcherMotor = 0;
+	launcherMotor.move(0);
 
-	// pros::delay(500);
+	pros::delay(500);
 
-	// backwardAuton(8);
+	backwardAuton(8);
 
-	// pros::delay(100);
-	// autonFlap();
-	// pros::delay(100);
+	pros::delay(100);
+	autonFlap();
+	pros::delay(100);
 	
-	// backwardAuton(20);
+	backwardAuton(20);
 }
 
 
