@@ -9,6 +9,9 @@ pros::Motor driveLeftBack(12);
 pros::Motor driveLeftFront(13);
 pros::Motor driveRightBack(14);
 pros::Motor driveRightFront(15);
+pros::Motor driveLeftMiddle(18);
+pros::Motor driveRightMiddle(17);
+
 pros::Motor launcherMotor(16);
 
 pros::Motor_Group leftDrive({12, 13});
