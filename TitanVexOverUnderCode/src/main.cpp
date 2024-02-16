@@ -110,6 +110,11 @@ void autonomous() {
 
 void opcontrol() {
 
+	// backwardAuton(3);
+	// turnRight(20);
+	// backwardAuton(5);
+	autonLauncher(10);
+	
 	while (true) {
 		
 		drive();
