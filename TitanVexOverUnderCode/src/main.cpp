@@ -70,24 +70,10 @@ void competition_initialize() {}
  * from where it left off.
  */
 void autonomous() {
-	// turnLeft(30);
-	// pros::delay(500);
-	// // forwardAuton(3);
-	// turnLeft(90);
-	// autonLauncher(30);	// turnRight(40);
-	// // pros::delay(500);
-	// // forwardAuton(8);
-	// // pros::delay(500);
-	// // autonFlap();
-	// // pros::delay(500);
-	// // forwardAuton(15);
-	// backwardAuton(5);
-	// turnLeft(20);
-	// autonFlap();
-	// backwardAuton(3);
-	// forwardAuton(3);
-	// turnRight(20);
-
+	// forwardAuton(5);
+	// turnRight(90);
+	forwardAuton(4);
+	backwardAuton(4);
 }
 
 
@@ -107,13 +93,23 @@ void autonomous() {
 
  */
 
+void autonSkills(){
+	turnRight(35);
+	forwardAuton(4);
+	turnLeft(100);
+	forwardAuton(2);
+	turnRight(80);
+
+	pros::delay(500);
+	autonFlap();
+	pros::delay(500);
+	forwardAuton(2.5);
+}
+
 
 void opcontrol() {
-
-	// backwardAuton(3);
-	// turnRight(20);
-	// backwardAuton(5);
-	autonLauncher(10);
+	
+	autonSkills();
 	
 	while (true) {
 		

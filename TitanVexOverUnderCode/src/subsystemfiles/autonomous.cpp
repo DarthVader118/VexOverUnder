@@ -30,7 +30,7 @@ void backwardAuton(int time){
     setDriveMotors(0, 0); // Stop right motor
 }
 
-void turnLeft(int degrees){
+void turnRight(int degrees){
     int time = (FULL_ROTATION_TIME / 360) * degrees;
     // Assuming leftMotor and rightMotor are your motor variables
     setDriveMotors(-127, 127); // Set left motor to full power, Set right motor to full power
@@ -40,7 +40,7 @@ void turnLeft(int degrees){
     setDriveMotors(0, 0); // Stop motors
 }
 
-void turnRight(int degrees){
+void turnLeft(int degrees){
     int time = (FULL_ROTATION_TIME / 360) * degrees;
     // Assuming leftMotor and rightMotor are your motor variables
     setDriveMotors(127, -127); // Set left motor to full power, Set right motor to full power
